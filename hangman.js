@@ -1,4 +1,12 @@
-let word = 'roses';
+let words = ['abruptly','absurd','affix','askew','avenue','awkward','axiom','azure','bandwagon','banjo','beekeeper','bikini','blitz','blizzard',
+'boggle','bookworm','boxcar','buckaroo','buffoon','buxom','buzzard','buzzing','buzzwords','caliph','cobweb','croquet','crypt',
+'curacao','cycle','daiquiri','dirndl','disavow','dizzying','duplex','dwarves','embezzle','equip','espionage','euouae','exodus','faking','fishhook','fixable',
+'fjord','flapjack','flopping','fluffiness','flyby','foxglove','frazzled','fuchsia','funny','gabby','galaxy','galvanize','gazebo','giaour','gizmo',
+'glowworm','gnarly','gossip','grogginess','haiku','haphazard','hyphen','icebox','injury','ivy','jackpot','jaundice',
+'jawbreaker','jaywalk','jazziest','jelly','jigsaw','jinx','jiujitsu','jockey','jogging','joking','jovial','joyful','juicy','jukebox','jumbo',
+'kayak','kazoo','keyhole','kilobyte','kiosk','kitsch','kiwifruit','klutz','knapsack','lengths','lucky','luxury','lymph','marquis','matrix',]
+
+let word = words[Math.floor(Math.random() * 100)].toUpperCase();
 
 let solution = '';
 for(let i = 0; i<word.length;i++){
@@ -35,13 +43,12 @@ function checkWin(){
 function checkLose(){
     if(index == lives){
         bodyParts[index]();
-        alert('You lost');
+        alert(`You lost\n- ${word} -`);
         location.reload()
     }
     else{
         bodyParts[index]();
         index++
-        console.log(index, lives)
     }
 }
 
@@ -120,7 +127,7 @@ let lives = bodyParts.length - 1;
 // Event lisener for keyboard input
 let index = 0;
 function draw(event){
-    let letter = event.key
+    let letter = event.key.toUpperCase()
     
     if(word.indexOf(letter) == -1){
         checkLose()
