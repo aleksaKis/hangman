@@ -32,6 +32,19 @@ function checkWin(){
     }
 }
 
+function checkLose(){
+    if(index == lives){
+        bodyParts[index]();
+        alert('You lost');
+        location.reload()
+    }
+    else{
+        bodyParts[index]();
+        index++
+        console.log(index, lives)
+    }
+}
+
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext('2d');
 
@@ -61,7 +74,7 @@ function drawHead(){
     ctx.fill();
 }
 
-function drawBody(){
+function drawNeck(){
     ctx.beginPath(); 
     ctx.moveTo(X/2, Y/2)
     ctx.lineTo(X/2,Y - Y/3);
@@ -74,6 +87,7 @@ function drawLeftArm(){
     ctx.lineTo(X/3, Y/2);
     ctx.stroke();
 }
+
 function drawRightArm(){
     ctx.beginPath();
     ctx.moveTo(X/2, Y-Y/3);
@@ -81,17 +95,35 @@ function drawRightArm(){
     ctx.stroke();   
 }
 
+function drawBody(){
+    ctx.beginPath();
+    ctx.moveTo(X/2, Y - Y/3);
+    ctx.lineTo(X/2, Y/2 + Y/4);
+    ctx.stroke();
+}
+function drawLeftLeg(){
+    ctx.beginPath();
+    ctx.moveTo(X/2, 3*Y/4);
+    ctx.lineTo(X/3, 5*Y/6);
+    ctx.stroke();
+}
+function drawRightLeg(){
+    ctx.beginPath();
+    ctx.moveTo(X/2, 3*Y/4);
+    ctx.lineTo(X/2 + X/6, 5*Y/6);
+    ctx.stroke();
+}
 
-let bodyParts = [drawHead, drawBody, drawLeftArm, drawRightArm];
+let bodyParts = [drawHead, drawNeck, drawLeftArm, drawRightArm, drawBody, drawLeftLeg, drawRightLeg];
+let lives = bodyParts.length - 1;
 
 // Event lisener for keyboard input
 let index = 0;
 function draw(event){
     let letter = event.key
-    if(word.indexOf(letter) == -1 && index < bodyParts.length){
-        bodyParts[index]();
-        index++
-        console.log(letter)
+    
+    if(word.indexOf(letter) == -1){
+        checkLose()
         }
     
     else{
