@@ -1,7 +1,9 @@
 <html>
 <head>
     <title>Handman</title>
-     <link rel="stylesheet" type="text/css" href="hangman.css">
+    <link rel='stylesheet' media='screen and (max-width: 900px)' type='text/css' href='smallscreen.css'>
+    <link rel='stylesheet' media='screen and (min-width: 600px)' type='text/css' href='widescreen.css'>
+    <link rel="icon" type="image/png" href="icon.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet"> 
 
@@ -11,15 +13,15 @@
 <body onkeypress='draw(event)'>
 
     <div class='hangman'>
-        <canvas id='myCanvas' width='500' height='500' style='border: 1px solid black'></canvas>
+        <div class = 'left'><div class='wrong'><p id ='wrong'></p></div></div>
+            <canvas id='myCanvas' width="500" height="500"></canvas>
+        <div class = 'right'></div>
     </div>
 
-    <br>
+
     <div class = 'context'>
         <div class='word'><p id='solution'></p></div>
-        <button type="button" onclick='location.reload()'>Play again</button>
-    <br>
-        <div class='wrong'><p id ='wrong'></p></div>
+        <button type="button" onclick='location.reload()'>play again</button>
     </div>
     <script src='hangman.js'></script>
 </body>

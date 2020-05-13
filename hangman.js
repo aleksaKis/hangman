@@ -52,7 +52,7 @@ function checkWin(){
     if(word == solution.replace(/\s/g, '')){
 
         ctx.fillStyle = 'rgb(0, 200, 0)';
-        ctx.fillText('You Won!', X/2, Y/2 - Y/3);
+        ctx.fillText('YOU WON!', X/2, Y/2 - Y/3);
         game = false
         //location.reload();
     }
@@ -64,8 +64,8 @@ function checkLose(){
         bodyParts[index]();
         
         ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillText('You Lost', X/2, Y/2 - Y/3);
-        ctx.fillText(word, X/2, Y/2 + Y/3);
+        ctx.fillText('YOU LOST', X/2, Y/2 - Y/3);
+        ctx.fillText(word, X/2, Y - Y/32);
         game = false
         //location.reload()
     }

@@ -1,0 +1,57 @@
+body{
+	font-family: 'Walter Turncoat', cursive;
+}
+
+.hangman{
+	width: 100%;
+	height: 60%;
+}
+
+.hangman > canvas{
+	width: 33%;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: inline-block;
+}
+
+.left{
+	width: 33%;
+	float: left;
+	display: inline-block;
+
+}
+.right{
+	width: 33%;
+	float:right;
+	display: inline-block;
+}
+
+.wrong{
+	text-align: center;
+	padding-top: 50%;
+	font-size: 32px;
+}
+.context{
+	text-align:center;
+	font-size: 32px;
+}
+
+button{
+	background-color: #4CAF50;
+	border: none;
+ 	color: white;
+ 	padding: 15px 32px;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	display: inline-block;
+ 	font-size: 16px;
+ 	font-family: 'Walter Turncoat', cursive;
+ 	margin: 4px 2px;
+ 	cursor: pointer;
+ 	border-radius: 50%;
+}
+
+button:hover{
+	background-color: #3e8e41;
+}
