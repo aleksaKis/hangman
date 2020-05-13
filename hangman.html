@@ -1,18 +1,26 @@
 <html>
 <head>
     <title>Handman</title>
-    <link rel="handman.css" href="styles.css">
+     <link rel="stylesheet" type="text/css" href="hangman.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet"> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8"> 
 </head>
 <body onkeypress='draw(event)'>
-    <div class='handman'>
-    <canvas id='myCanvas' width='500' height='500' style='border: 1px solid black'></canvas>
+
+    <div class='hangman'>
+        <canvas id='myCanvas' width='500' height='500' style='border: 1px solid black'></canvas>
     </div>
-    
-    <div class='word'><p id='solution'></p>
-    
+
+    <br>
+    <div class = 'context'>
+        <div class='word'><p id='solution'></p></div>
+        <button type="button" onclick='location.reload()'>Play again</button>
+    <br>
+        <div class='wrong'><p id ='wrong'></p></div>
+    </div>
     <script src='hangman.js'></script>
-<body>
+</body>
 <html>
