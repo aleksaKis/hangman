@@ -1,6 +1,6 @@
 body{
 	font-family: 'Walter Turncoat', cursive;
-	background-color: #f2f7ff;
+	background-color: #dae6e4;
 }
 
 .hangman{
@@ -30,7 +30,7 @@ body{
 
 .wrong{
 	text-align: center;
-	padding-top: 50%;
+	padding-top: 40%;
 	font-size: 32px;
 }
 .context{
@@ -38,7 +38,7 @@ body{
 	font-size: 32px;
 }
 
-button{
+.play{
 	background-color: #4CAF50;
 	border: none;
  	color: white;
@@ -53,6 +53,33 @@ button{
  	border-radius: 50%;
 }
 
-button:hover{
+.play:hover{
 	background-color: #3e8e41;
 }
+.buttons > button{
+	background-color: #c8dbd9;
+	border: none;
+ 	color: #363636;
+ 	text-align: center;
+ 	display: inline-block;
+ 	font-size: 32px;
+ 	font-family: 'Walter Turncoat', cursive;
+ 	margin: 5px 2px;
+ 	cursor: pointer;
+ 	border-radius: 50%;
+}
+.buttons {
+	padding: 20%;
+	float: right;
+	display: inline-block;
+}
+.buttons > button:hover{
+	background-color: #cf5959;
+}
+.buttons > button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+ }
+ footer{
+ 	text-align: center;
+ }

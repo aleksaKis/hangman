@@ -15,14 +15,49 @@
     <div class='hangman'>
         <div class = 'left'><div class='wrong'>- wrong letters -<br><p id ='wrong'></p></div></div>
             <canvas id='myCanvas' width="500" height="500"></canvas>
-        <div class = 'right'></div>
+        <div class = 'right'>
+            <div class=buttons>
+                <button onclick="draw('a')">A</button>
+                <button onclick="draw('b')">B</button>
+                <button onclick="draw('c')">C</button>
+                <button onclick="draw('d')">D</button>
+                <button onclick="draw('e')">E</button>
+                <button onclick="draw('f')">F</button>
+                <button onclick="draw('g')">G</button>
+                <button onclick="draw('h')">H</button>
+                <button onclick="draw('i')">I</button>
+                <button onclick="draw('j')">J</button>
+                <button onclick="draw('k')">K</button>
+                <button onclick="draw('l')">L</button>
+                <button onclick="draw('m')">M</button>
+                <button onclick="draw('n')">N</button>
+                <button onclick="draw('o')">O</button>
+                <button onclick="draw('p')">P</button>
+                <button onclick="draw('q')">Q</button>
+                <button onclick="draw('r')">R</button>
+                <button onclick="draw('s')">S</button>
+                <button onclick="draw('t')">T</button>
+                <button onclick="draw('u')">U</button>
+                <button onclick="draw('v')">V</button>
+                <button onclick="draw('w')">W</button>
+                <button onclick="draw('x')">X</button>
+                <button onclick="draw('y')">Y</button>
+                <button onclick="draw('z')">Z</button>
+            </div>
+        </div>
     </div>
 
 
     <div class = 'context'>
+        <br>
         <div class='word'><p id='solution'></p></div>
-        <button type="button" onclick='location.reload()'>play again</button>
+        <button type="button" class='play' onclick='location.reload()'>play again</button><br>
+        
     </div>
+    <footer>
+        <p> use buttons on the right or the keyboard to play.</p>
+        <a href='https://github.com/aleksaKis/hangman'>https://github.com/aleksaKis/hangman</a>
+    </footer>
     <script src='hangman.js'></script>
 </body>
 <html>

@@ -163,9 +163,12 @@ let lives = bodyParts.length - 1;
 
 // Event lisener for keyboard input
 let index = 0;
+
 function draw(event){
-    let letter = event.key.toUpperCase()
-    
+    console.log(event);
+    let letter = event.key !== undefined ? event.key : event;
+    letter = letter.toUpperCase();
+    console.log(letter)
     if(game){
         if(word.indexOf(letter) == -1){
             addWrong(letter);
