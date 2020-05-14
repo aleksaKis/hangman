@@ -3,12 +3,13 @@ let game = true
 let words = ['abruptly','absurd','affix','askew','avenue','awkward','axiom','azure','bandwagon','banjo','beekeeper','bikini','blitz','blizzard',
 'boggle','bookworm','boxcar','buckaroo','buffoon','buxom','buzzard','buzzing','buzzwords','caliph','cobweb','croquet','crypt',
 'curacao','cycle','daiquiri','dirndl','disavow','dizzying','duplex','dwarves','embezzle','equip','espionage','euouae','exodus','faking','fishhook','fixable',
-'fjord','flapjack','flopping','fluffiness','flyby','foxglove','frazzled','fuchsia','funny','gabby','galaxy','galvanize','gazebo','giaour','gizmo',
+'fjord','flapjack','flopping','fluffiness','flyby','foxglove','frazzled','funny','gabby','galaxy','galvanize','gazebo','giaour','gizmo',
 'glowworm','gnarly','gossip','grogginess','haiku','haphazard','hyphen','icebox','injury','ivy','jackpot','jaundice',
 'jawbreaker','jaywalk','jazziest','jelly','jigsaw','jinx','jiujitsu','jockey','jogging','joking','jovial','joyful','juicy','jukebox','jumbo',
-'kayak','kazoo','keyhole','kilobyte','kiosk','kitsch','kiwifruit','klutz','knapsack','lengths','lucky','luxury','lymph','marquis','matrix',]
+'kayak','kazoo','keyhole','kilobyte','kiosk','kitsch','kiwifruit','klutz','knapsack','lengths','lucky','luxury','marquis','matrix','quiz','waltz','zipper','queue',
+'qartz','rhythm','yummy','puppy','microwave','staff','wizard','voodo','puzzling','transcript','unworthy']
 
-let word = words[Math.floor(Math.random() * 100)].toUpperCase();
+let word = words[Math.floor(Math.random() * words.length)].toUpperCase();
 
 let solution = '';
 for(let i = 0; i<word.length;i++){
@@ -53,8 +54,7 @@ function checkWin(){
 
         ctx.fillStyle = 'rgb(0, 200, 0)';
         ctx.fillText('YOU WON!', X/2, Y/2 - Y/3);
-        game = false
-        //location.reload();
+        game = false;
     }
 }
 
@@ -65,9 +65,9 @@ function checkLose(){
         
         ctx.fillStyle = 'rgb(200, 0, 0)';
         ctx.fillText('YOU LOST', X/2, Y/2 - Y/3);
-        ctx.fillText(word, X/2, Y - Y/32);
+        //ctx.fillText(word, X/2, Y - Y/32);
+        document.getElementById('solution').innerHTML = word.split('').join(' ');
         game = false
-        //location.reload()
     }
     else{
         bodyParts[index]();
