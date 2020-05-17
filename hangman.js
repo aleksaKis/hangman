@@ -1,4 +1,4 @@
-let game = true
+let game = true;
 
 let words = ['abruptly','absurd','affix','askew','avenue','awkward','axiom','azure','bandwagon','banjo','beekeeper','bikini','blitz','blizzard',
 'boggle','bookworm','boxcar','buckaroo','buffoon','buxom','buzzard','buzzing','buzzwords','caliph','cobweb','croquet','crypt',
@@ -165,10 +165,8 @@ let lives = bodyParts.length - 1;
 let index = 0;
 
 function draw(event){
-    console.log(event);
     let letter = event.key !== undefined ? event.key : event;
     letter = letter.toUpperCase();
-    console.log(letter)
     if(game){
         if(word.indexOf(letter) == -1){
             addWrong(letter);
