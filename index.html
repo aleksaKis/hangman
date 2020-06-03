@@ -3,17 +3,21 @@
     <title>Handman</title>
     <link rel='stylesheet' media='screen and (max-width: 900px)' type='text/css' href='smallscreen.css'>
     <link rel='stylesheet' media='screen and (min-width: 600px)' type='text/css' href='widescreen.css'>
-    <link rel="icon" type="image/png" href="images/icon.png" />
-
+    <link rel="icon" type="image/png" href="images/icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet"> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8"> 
+
+    <script src='https://use.fontawesome.com/e5750f9f2f.js'></script>
 </head>
 <body onkeypress='draw(event)'>
+<div class='main'>
     <div class='hangman'>
         <div class = 'left'>        
-            <div class='wrong'>- wrong letters -<br><p id ='wrong'></p></div>
+            <div class='wrong'><i class="fa fa-times" aria-hidden="true"></i>
+ wrong letters <i class="fa fa-times" aria-hidden="true"></i>
+<br><p id ='wrong'></p></div>
         </div>
             <canvas id='myCanvas' width="500" height="500"></canvas>
         <div class = 'right'>
@@ -55,9 +59,10 @@
         <button type="button" class='play' onclick='location.reload()'>play again</button><br>
     </div>
     <footer>
-        <p> use buttons on the right or the keyboard to play.</p>
-        <a href='https://github.com/aleksaKis/hangman'>https://github.com/aleksaKis/hangman</a>
+        <p> use buttons on the right or the keyboard to play.
+        <a class='github' href='https://github.com/aleksaKis/hangman'><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></p>
     </footer>
     <script src='hangman.js'></script>
+    <div>
 </body>
 <html>

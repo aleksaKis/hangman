@@ -1,13 +1,18 @@
 body{
-	font-family: 'Walter Turncoat', cursive;
-	background-color: #dae6e4;
+	background-color: #292930
 }
-
+.main{
+	font-family: 'Walter Turncoat', cursive;
+	background-color: #f5ffd6;
+	border: 3px solid #292930;
+	border-radius: 30px;
+	color : #292930;
+ 	text-align: center;
+}
 .hangman{
 	width: 100%;
-	height: 60%;
+	height: 59%;
 }
-
 .hangman > canvas{
 	width: 33%;
 	height: 100%;
@@ -15,35 +20,29 @@ body{
 	margin-left: auto;
 	display: inline-block;
 }
-
 .left{
 	width: 33%;
 	float: left;
 	display: inline-block;
-
 }
 .right{
 	width: 33%;
 	float:right;
 	display: inline-block;
 }
-
 .wrong{
 	text-align: center;
 	padding-top: 40%;
 	font-size: 32px;
 }
 .context{
-	text-align:center;
 	font-size: 32px;
 }
-
 .play{
 	background-color: #4CAF50;
 	border: none;
  	color: white;
  	padding: 15px 32px;
- 	text-align: center;
  	text-decoration: none;
  	display: inline-block;
  	font-size: 16px;
@@ -52,16 +51,13 @@ body{
  	cursor: pointer;
  	border-radius: 50%;
 }
-
 .play:hover{
 	background-color: #3e8e41;
 }
 .buttons > button{
 	width: 50px;
-	background-color: #c8dbd9;
+	background-color: #eeff6c;
 	border: none;
- 	color: #363636;
- 	text-align: center;
  	display: inline-block;
  	font-size: 32px;
  	font-family: 'Walter Turncoat', cursive;
@@ -70,18 +66,23 @@ body{
  	border-radius: 50%;
 }
 .buttons {
-	padding: 20%;
+	padding: 12%;
 	float: right;
 	display: inline-block;
-	text-align: center;
 }
 .buttons > button:hover{
 	background-color: #cf5959;
 }
 .buttons > button:active {
-  box-shadow: 0 5px #666;
+  box-shadow: 0 3px #666;
   transform: translateY(4px);
  }
  footer{
- 	text-align: center;
+ 	width: 95%;
+ 	margin: auto;
+ }
+ .github{
+ 	float: left;
+ 	text-decoration:none;
+ 	color : black;
  }

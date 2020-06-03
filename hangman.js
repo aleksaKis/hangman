@@ -91,6 +91,9 @@ const Y = canvas.height;
 
 ctx.beginPath();
 // Setting sytle
+
+ctx.fillStyle = '#292930';
+ctx.strokeStyle = '#292930';
 ctx.lineWidth = 5;
 ctx.lineCap = 'round';
 ctx.font = '48px Walter Turncoat'
